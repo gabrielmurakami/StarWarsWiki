@@ -30,8 +30,4 @@
 
 :white_check_mark: - Expo: https://docs.expo.io/
 
-:white_check_mark: - React Navigation: https://reactnavigation.org/
-
-:white_check_mark: - React Animatable: https://github.com/oblador/react-native-animatable
-
 :white_check_mark: - Styled Components: https://styled-components.com/
