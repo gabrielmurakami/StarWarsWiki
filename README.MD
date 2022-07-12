@@ -31,3 +31,7 @@
 :white_check_mark: - Expo: https://docs.expo.io/
 
 :white_check_mark: - Styled Components: https://styled-components.com/
+
+:white_check_mark: - Expo Font: https://docs.expo.dev/versions/latest/sdk/font/
+
+:white_check_mark: - Source Sans Pro Font: https://github.com/expo/google-fonts/tree/master/font-packages/source-sans-pro#readme
