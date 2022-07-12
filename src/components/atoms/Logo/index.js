@@ -1,6 +1,6 @@
-import React from "react";
-import { LogoImage } from "./styles";
+import React from 'react'
+import { LogoImage } from './styles'
 
 export const Logo = () => {
-  return <LogoImage source={require("../../../../assets/logo.png")} />;
-};
+  return <LogoImage source={require('../../../../assets/logo.png')} />
+}

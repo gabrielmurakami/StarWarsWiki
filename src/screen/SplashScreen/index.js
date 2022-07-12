@@ -1,6 +1,6 @@
-import { StatusBar } from "expo-status-bar";
-import { StyleSheet, View, Image } from "react-native";
-import { Text, Logo } from "../../components";
+import { StatusBar } from 'expo-status-bar'
+import { StyleSheet, View } from 'react-native'
+import { Text, Logo } from '../../components'
 
 export const SplashScreen = () => {
   return (
@@ -9,19 +9,19 @@ export const SplashScreen = () => {
       <Logo />
       <Text>Star Wars - Wiki</Text>
     </View>
-  );
-};
+  )
+}
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#161616",
-    alignItems: "center",
-    justifyContent: "center",
+    backgroundColor: '#161616',
+    alignItems: 'center',
+    justifyContent: 'center',
   },
 
   image: {
     width: 64,
     height: 64,
   },
-});
+})

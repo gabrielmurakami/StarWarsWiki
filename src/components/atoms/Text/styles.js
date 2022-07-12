@@ -1,8 +1,8 @@
-import styled from "styled-components/native";
+import styled from 'styled-components/native'
 
 export const CustomText = styled.Text`
-  font-size: 24px;
+  font-size: ${({ theme }) => theme.metrics.px(24)}px; // !!!! REVER !!!!
   margin-top: 7px;
-  color: ${({ color }) => color || "#FFF"};
-  font-weight: bold;
-`;
+  color: ${({ color, theme }) => color || theme.colors.white};
+  font-family: 'SourceSansPro_700Bold';
+`
