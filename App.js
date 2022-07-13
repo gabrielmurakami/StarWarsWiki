@@ -1,6 +1,6 @@
 import React from 'react'
 import { LogBox } from 'react-native'
-import { SplashScreen } from './src/screen/SplashScreen'
+import { Home } from './src/screen'
 import AppLoading from 'expo-app-loading'
 import { ThemeProvider } from 'styled-components'
 import {
@@ -10,6 +10,7 @@ import {
   SourceSansPro_600SemiBold,
   SourceSansPro_900Black,
 } from '@expo-google-fonts/source-sans-pro'
+import { Routes } from './src/routes'
 import { theme } from './src/styles'
 
 export default function App() {
@@ -27,7 +28,7 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      <SplashScreen />
+      <Routes />
     </ThemeProvider>
   )
 }
