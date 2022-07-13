@@ -35,3 +35,5 @@
 :white_check_mark: - Expo Font: https://docs.expo.dev/versions/latest/sdk/font/
 
 :white_check_mark: - Source Sans Pro Font: https://github.com/expo/google-fonts/tree/master/font-packages/source-sans-pro#readme
+
+:white_check_mark: - React Navigation: https://reactnavigation.org/
