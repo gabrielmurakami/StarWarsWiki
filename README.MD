@@ -37,3 +37,7 @@
 :white_check_mark: - Source Sans Pro Font: https://github.com/expo/google-fonts/tree/master/font-packages/source-sans-pro#readme
 
 :white_check_mark: - React Navigation: https://reactnavigation.org/
+
+:white_check_mark: - Zustand: https://github.com/pmndrs/zustand
+
+:white_check_mark: - Linear Gradient: https://docs.expo.dev/versions/latest/sdk/linear-gradient/
