@@ -1,11 +1,20 @@
 import React from 'react'
-import { PlayContainer } from './styles'
+import { PlayButtonContainer } from './styles'
+import { Ionicons } from '@expo/vector-icons'
+import { theme } from '~/styles'
 import { Text } from '~/components/atoms'
 
-export const PlauButton = () => {
+export const PlayButton = () => {
   return (
-    <PlayContainer>
-      <Text>Play</Text>
-    </PlayContainer>
+    <PlayButtonContainer>
+      {/* <Ionicons 
+      name='play'
+      size={theme.metrics.px(16)}
+      color={theme.colors.black}
+      />
+      <Text fontFamily="bold" size={14} color="black">
+        Play
+      </Text> */}
+    </PlayButtonContainer>
   )
 }
