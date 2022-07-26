@@ -5,7 +5,7 @@ import { Text } from '../../atoms'
 import { ListContainer } from './styles'
 import { theme } from '~/styles'
 
-export const HomeList = ({ data, title }) => {
+export const HomeList = ({ data, title, type }) => {
   return (
     <ListContainer>
       <Text fontFamily="black" size={18} ml={24}>
@@ -15,7 +15,7 @@ export const HomeList = ({ data, title }) => {
         horizontal
         showsHorizontalScrollIndicator={false}
         data={data}
-        renderItem={({ item }) => <Card item={item} />}
+        renderItem={({ item }) => <Card item={{ ...item, type }} />}
         keyExtractor={(item) => String(item.id)}
         contentContainerStyle={{
           paddingTop: theme.metrics.px(12),

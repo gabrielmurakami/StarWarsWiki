@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import {
   HeroContainer,
   HeroImageBackground,
@@ -8,9 +8,33 @@ import {
 import { colors } from '~/styles/colors'
 import { Text, Logo } from '~/components/atoms'
 import { Tag, IconButton, PlayButton } from '~/components/molecules'
+import { useFavorites } from '~/services/hooks'
 
 export const Hero = ({ item, onDetail }) => {
+  const [loading, setLoading] = useState(true)
+  const [isFavorite, setIsFavorite] = useState(false)
+  const { addFavorite, getFavorites, removeFevorites } = useFavorites()
   const { image_url, title, subtitle, type } = item
+
+  const checkIsFavorite = async () => {
+    setLoading(true)
+    const favorites = await getFavorites()
+    const isInFavorite = favorites.filter(
+      (fv) => fv.id === item.id 
+    )
+    console.log({ isFavorite })
+    setIsFavorite(isInFavorite.length > 0)
+    setLoading(false)
+  }
+
+  useEffect(() => {
+    checkIsFavorite()
+  }, [])
+
+  const addDataToFavorite = async () => {
+    const result = await addFavorite(item)
+    console.log(result)
+  }
 
   return (
     <HeroContainer>
@@ -27,7 +51,11 @@ export const Hero = ({ item, onDetail }) => {
           </Text>
           <Text size={18}>{subtitle}</Text>
           <ButtonsView>
-            <IconButton label="Favoritos" iconName="add-circle-outline" />
+            <IconButton
+              onPress={() => addDataToFavorite()}
+              label="Favoritos"
+              iconName="add-circle-outline"
+            />
             <PlayButton />
             {!onDetail && (
               <IconButton

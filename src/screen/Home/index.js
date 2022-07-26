@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { StatusBar } from 'react-native'
 import { ScreenScrollContainer, HomeList, Hero, Loader } from '../../components'
 import { useGetData } from '~/services/hooks'
 
@@ -23,17 +24,19 @@ export const Home = () => {
     callGetData()
   }, [])
 
-  if( loading ) {
-    <ScreenScrollContainer>
-      <Loader />
-    </ScreenScrollContainer>
+  if (loading) {
+    return (
+      <ScreenScrollContainer>
+        <Loader />
+      </ScreenScrollContainer>
+    )
   }
 
   return (
     <ScreenScrollContainer align="flex-start" justify="flex-start">
-      <Hero item={films[0]} />
-      <HomeList title="Filmes" data={films} />
-      <HomeList title="Personagens" data={characters} />
+      <Hero item={{ ...films[0], type: 'Filme' }} />
+      <HomeList title="Filmes" data={films} type="Filme" />
+      <HomeList title="Personagens" data={characters} type="Personagem" />
     </ScreenScrollContainer>
   )
 }
