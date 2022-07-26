@@ -41,3 +41,9 @@
 :white_check_mark: - Zustand: https://github.com/pmndrs/zustand
 
 :white_check_mark: - Linear Gradient: https://docs.expo.dev/versions/latest/sdk/linear-gradient/
+
+:white_check_mark: - Axios: https://github.com/axios/axios
+
+:white_check_mark: - TabNavigator (Custom Tab): https://reactnavigation.org/docs/tab-based-navigation/ + https://reactnavigation.org/docs/bottom-tab-navigator/#tabbar
+
+:white_check_mark: - AsyncStorage: https://docs.expo.dev/versions/latest/sdk/async-storage/
