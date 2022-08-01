@@ -1,6 +1,5 @@
 import React from 'react'
 import { LogBox } from 'react-native'
-import { Home } from './src/screen'
 import AppLoading from 'expo-app-loading'
 import { ThemeProvider } from 'styled-components'
 import {

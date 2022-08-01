@@ -8,11 +8,11 @@ export const useFavorites = () => {
       let newDb
       const value = await AsyncStorage.getItem(DB_KEY)
       if (value !== null) {
-        // já existe bd
+        // já existe um banco de dados
         const db = JSON.parse(value)
-        newDb = Array[db].push(data)
+        newDb = [...db, data]
       } else {
-        //não existe, criar
+        // preciso criar um novo banco de dados
         newDb = [data]
       }
       const jsonValue = JSON.stringify(newDb)
@@ -33,20 +33,24 @@ export const useFavorites = () => {
     return []
   }
 
-  const removeFevorites = async (data) => {
+  const removeFavorite = async (data) => {
+    //console.log({ dataToRemove: data })
     try {
       let newDb
       const value = await AsyncStorage.getItem(DB_KEY)
       if (value !== null) {
-        // já existe bd
+        // já existe um banco de dados
         const db = JSON.parse(value)
-        newDb = Array[db].filter(
-          (fv) => fv.id === data.id && fv.type === data.type
-        )
+        //console.log({ currentDb: db })
+        newDb = db.filter((fv) => fv.id !== data.id && fv.title !== data.title)
       } else {
-        //não existe, criar
+        // preciso criar um novo banco de dados
         newDb = []
       }
+      //console.log({ newDb })
+
+      const jsonValue = JSON.stringify(newDb)
+      await AsyncStorage.setItem(DB_KEY, jsonValue)
       return newDb
     } catch (error) {
       console.log({ error })
@@ -57,6 +61,6 @@ export const useFavorites = () => {
   return {
     addFavorite,
     getFavorites,
-    removeFevorites,
+    removeFavorite,
   }
 }

@@ -13,16 +13,16 @@ import { useFavorites } from '~/services/hooks'
 export const Hero = ({ item, onDetail }) => {
   const [loading, setLoading] = useState(true)
   const [isFavorite, setIsFavorite] = useState(false)
-  const { addFavorite, getFavorites, removeFevorites } = useFavorites()
+  const { addFavorite, getFavorites, removeFavorite } = useFavorites()
   const { image_url, title, subtitle, type } = item
 
   const checkIsFavorite = async () => {
     setLoading(true)
     const favorites = await getFavorites()
     const isInFavorite = favorites.filter(
-      (fv) => fv.id === item.id 
+      (fv) => fv.id === item.id && fv.type === item.type
     )
-    console.log({ isFavorite })
+    //console.log({ favorites })
     setIsFavorite(isInFavorite.length > 0)
     setLoading(false)
   }
@@ -32,8 +32,13 @@ export const Hero = ({ item, onDetail }) => {
   }, [])
 
   const addDataToFavorite = async () => {
-    const result = await addFavorite(item)
-    console.log(result)
+    await addFavorite(item)
+    checkIsFavorite()
+  }
+
+  const removeDataFromFavorite = async () => {
+    await removeFavorite(item)
+    checkIsFavorite()
   }
 
   return (
@@ -52,9 +57,9 @@ export const Hero = ({ item, onDetail }) => {
           <Text size={18}>{subtitle}</Text>
           <ButtonsView>
             <IconButton
-              onPress={() => addDataToFavorite()}
-              label="Favoritos"
-              iconName="add-circle-outline"
+              onPress={() => isFavorite ? removeDataFromFavorite() : addDataToFavorite()}
+              label={isFavorite ? "Rem. Favoritos" : "Add Favoritos"}
+              iconName={isFavorite ? "remove-circle-outline" : "add-circle-outline"}
             />
             <PlayButton />
             {!onDetail && (
