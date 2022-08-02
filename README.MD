@@ -1,6 +1,8 @@
-## Star Wars - WIki
+## Star Wars - Wiki
 
-<!-- ![Alt Text](https://i.ibb.co/r2QNzxm/Captura-de-Tela-2022-07-07-a-s-18-44-32.png) -->
+
+<img src="https://i.ibb.co/2nbwZtN/expo-go.jpg" width=300px>
+
 
 ## Prerequisites
 
@@ -47,3 +49,5 @@
 :white_check_mark: - TabNavigator (Custom Tab): https://reactnavigation.org/docs/tab-based-navigation/ + https://reactnavigation.org/docs/bottom-tab-navigator/#tabbar
 
 :white_check_mark: - AsyncStorage: https://docs.expo.dev/versions/latest/sdk/async-storage/
+
+:white_check_mark: - Youtube iFrame: https://lonelycpp.github.io/react-native-youtube-iframe
