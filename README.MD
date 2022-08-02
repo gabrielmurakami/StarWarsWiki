@@ -1,6 +1,19 @@
-## Star Wars - Wiki
+# Projeto Star Wars Wiki
 
-<img src="https://i.ibb.co/2nbwZtN/expo-go.jpg" width=300px>
+## Description
+
+Star Wars Wiki it's a project developed during DevRiseWeek.
+The main functionality is to show StarWars films and characters, and you can add them to your favorite lists.
+
+![Alt Text](https://media.giphy.com/media/6OECbfhIGPGF7vaozV/giphy.gif)
+
+## Useful Links:
+
+Figma for the project: https://www.figma.com/file/FcJqDIFJpy43Zik4QhoJ39/DevRiseWeek-StarWars?node-id=2%3A2
+
+Project published on expo: https://expo.dev/@gabrielmk666/StarWarsWiki
+
+API: https://sevencoders-starwars-wiki.herokuapp.com
 
 ## Prerequisites
 
