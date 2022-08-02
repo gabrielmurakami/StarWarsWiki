@@ -1,6 +1,6 @@
 ## Star Wars - WIki
 
-<!-- ![Alt Text](https://i.ibb.co/r2QNzxm/Captura-de-Tela-2022-07-07-a-s-18-44-32.png) -->
+![Alt Text](https://i.ibb.co/2nbwZtN/expo-go.jpg)
 
 ## Prerequisites
 
