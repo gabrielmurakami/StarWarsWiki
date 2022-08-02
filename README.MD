@@ -1,8 +1,6 @@
 ## Star Wars - Wiki
 
-
 <img src="https://i.ibb.co/2nbwZtN/expo-go.jpg" width=300px>
-
 
 ## Prerequisites
 
