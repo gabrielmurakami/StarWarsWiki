@@ -3,7 +3,18 @@ import { useNavigation } from '@react-navigation/native'
 import { CardContainer, CardImage } from './styles'
 import { useDataStore } from '~/services/stores'
 
-export const Card = ({ item }) => {
+const sizes = {
+  small: {
+    h: 124,
+    w: 88,
+  },
+  large: {
+    h: 150,
+    w: 102,
+  },
+}
+
+export const Card = ({ item, size }) => {
   const navigation = useNavigation()
   const { setSelectedData } = useDataStore()
 
@@ -12,7 +23,10 @@ export const Card = ({ item }) => {
     navigation.navigate('Detail')
   }
   return (
-    <CardContainer onPress={() => onSelectedItem()}>
+    <CardContainer
+      onPress={() => onSelectedItem()}
+      size={size ? sizes[size] : sizes.small}
+    >
       <CardImage source={{ uri: item.image_url }} />
     </CardContainer>
   )

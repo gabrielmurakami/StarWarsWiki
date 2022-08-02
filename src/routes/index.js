@@ -11,6 +11,7 @@ import {
   Detail,
   FavoritesScreen,
   SearchScreen,
+  WatchScreen,
 } from '../screen'
 
 const BottomRoute = () => {
@@ -41,10 +42,11 @@ const Stack = createNativeStackNavigator()
 export const Routes = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Home" component={BottomRoute} />
+      <Stack.Navigator screenOptions={{ headerShown: false }} initialRouteName={SplashScreen}>
         <Stack.Screen name="SplashScreen" component={SplashScreen} />
+        <Stack.Screen name="Home" component={BottomRoute} />
         <Stack.Screen name="Detail" component={Detail} />
+        <Stack.Screen name="Watch" component={WatchScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )

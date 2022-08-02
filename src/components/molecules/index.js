@@ -1,4 +1,5 @@
 export * from './Card'
 export * from './Tag'
 export * from './IconButon'
-export * from './PlayButton'
+export * from './WatchButton'
+export * from './FavoriteStateModal'

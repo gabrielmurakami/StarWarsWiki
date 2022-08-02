@@ -1,6 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { StatusBar } from 'react-native'
-import { ScreenScrollContainer, HomeList, Hero, Loader } from '../../components'
+import {
+  ScreenScrollContainer,
+  HomeList,
+  Hero,
+  Loader,
+  Container,
+} from '../../components'
 import { useGetData } from '~/services/hooks'
 
 export const Home = () => {
@@ -26,9 +32,9 @@ export const Home = () => {
 
   if (loading) {
     return (
-      <ScreenScrollContainer>
+      <Container align="center" justify="center">
         <Loader />
-      </ScreenScrollContainer>
+      </Container>
     )
   }
 
