@@ -2,6 +2,8 @@
 
 <img src="https://i.ibb.co/2nbwZtN/expo-go.jpg" width=300px>
 
+![Alt Text](https://media.giphy.com/media/6OECbfhIGPGF7vaozV/giphy.gif)
+
 ## Prerequisites
 
 :white_check_mark: - Node.js
