@@ -1,4 +1,4 @@
-# Projeto Star Wars Wiki
+# Project Star Wars Wiki
 
 ## Description
 
