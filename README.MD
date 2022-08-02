@@ -15,8 +15,6 @@ Project published on expo: https://expo.dev/@gabrielmk666/StarWarsWiki
 
 API: https://sevencoders-starwars-wiki.herokuapp.com
 
-![Alt Text](https://media.giphy.com/media/6OECbfhIGPGF7vaozV/giphy.gif)
-
 ## Prerequisites
 
 :white_check_mark: - Node.js
